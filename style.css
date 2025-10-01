@@ -60,6 +60,20 @@ h2 {
   gap: 30px;
 }
 
+/* Media query untuk tampilan mobile (lebar layar <= 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Mengubah flex menjadi vertikal */
+    align-items: center; /* Memusatkan konten */
+    text-align: center; /* Memusatkan teks */
+  }
+
+  .about-container img {
+    width: 200px; /* Mengurangi ukuran gambar di mobile agar proporsional */
+    height: 200px;
+  }
+}
+
 .about-container img {
   width: 300px;
   height: 300px;
