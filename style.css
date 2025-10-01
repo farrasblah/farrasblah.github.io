@@ -60,20 +60,6 @@ h2 {
   gap: 30px;
 }
 
-/* Media query untuk tampilan mobile (lebar layar <= 768px) */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column; /* Mengubah flex menjadi vertikal */
-    align-items: center; /* Memusatkan konten */
-    text-align: center; /* Memusatkan teks */
-  }
-
-  .about-container img {
-    width: 200px; /* Mengurangi ukuran gambar di mobile agar proporsional */
-    height: 200px;
-  }
-}
-
 .about-container img {
   width: 300px;
   height: 300px;
@@ -123,48 +109,58 @@ h2 {
   transform: scale(1.2);
 }
 
-.fav-anime {
-  margin-top: 30px;
-}
-
-.fav-anime h3 {
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.anime-slider {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 10px;
-}
-
-.anime-card {
-  flex: 0 0 auto;
-  width: 150px;
-  background: #1e2a38;
-  border-radius: 12px;
-  padding: 10px;
+/* Hobby */
+.hobby-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   text-align: center;
-  scroll-snap-align: start;
-  color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  margin-top: 20px;
 }
 
-.anime-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hobby-item img {
+  width: 150px;       /* lebar wadah */
+  height: 150px;      /* tinggi wadah */
+  object-fit: cover;  /* biar isi gambar rapi, ga ketarik */
   border-radius: 10px;
+  border: 3px solid #2c4873;
+  margin-bottom: 10px;
 }
 
-.anime-card h4 {
-  margin: 8px 0 5px;
+.hobby-item p {
+  color: #fff;
   font-size: 16px;
 }
 
-.rating {
-  color: gold;
-  font-size: 18px;
+/* Media query untuk tampilan mobile (lebar layar <= 768px) */
+@media (max-width: 768px) {
+  /* Menyembunyikan judul h2 di section About, Gallery, dan Contact */
+  section h2 {
+    display: none;
+  }
+
+  /* Mengatur layout About menjadi vertikal */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-container img {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
 }
