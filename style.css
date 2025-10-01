@@ -140,10 +140,6 @@ h2 {
 
 /* Media query untuk tampilan mobile (lebar layar <= 768px) */
 @media (max-width: 768px) {
-  /* Menyembunyikan judul h2 di section About, Gallery, dan Contact */
-  section h2 {
-    display: none;
-  }
 
   /* Mengatur layout About menjadi vertikal */
   .about-container {
@@ -157,10 +153,7 @@ h2 {
     height: 200px;
   }
 
-  @media (max-width: 768px) {
   nav {
     display: none;
   }
-}
-
 }
